@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'http://localhost:5000/api';
 
 const API = axios.create({
-    baseURL: API_URL,
+    baseURL: 'http://localhost:5000/api',
 });
 
 API.interceptors.request.use((req) => {
@@ -17,7 +17,7 @@ API.interceptors.request.use((req) => {
 export const fetchProfile = async (callback) => {
     try {
         const token = localStorage.getItem('token');
-        const res = await axios.get(`${API_URL}/api/auth/profile`, {
+        const res = await axios.get(API_URL + '/auth/profile', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -34,7 +34,7 @@ export const fetchProfile = async (callback) => {
 export const fetchUser = async (userId, callback) => {
     try {
         const token = localStorage.getItem('token');
-        const res = await axios.get(`${API_URL}/api/auth/user/`, {
+        const res = await axios.get(API_URL + '/auth/user/', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -51,7 +51,7 @@ export const fetchVaccines = async (setVaccines) => {
     try {
         const token = localStorage.getItem('token');
 
-        const response = await axios.get(`${API_URL}/api/vaccines`, {
+        const response = await axios.get(API_URL + '/vaccines', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
