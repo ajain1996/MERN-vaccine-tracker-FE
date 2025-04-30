@@ -1,0 +1,258 @@
+/* Deals.css */
+.deals-container {
+    width: auto;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+}
+
+.discount-banner {
+    background: #f0f4f8;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.discount-banner h2 {
+    color: #2b6cb0;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+}
+
+.rating {
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.add-to-cart {
+    background: #2b6cb0;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.price {
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.prescription-section {
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.prescription-box,
+.consultation-box {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    width: 48%
+}
+
+.prescription-box {
+    background-color: #ffeb69;
+}
+
+.consultation-box {
+    background-color: #fdc090;
+}
+
+.file-info {
+    color: #718096;
+    margin: 1rem 0;
+}
+
+.upload-btn,
+.order-btn,
+.consult-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 2px solid #2b6cb0;
+    border-radius: 25px;
+    background: white;
+    color: #2b6cb0;
+    cursor: pointer;
+}
+
+.consult-btn {
+    background: #2b6cb0;
+    color: white;
+}
+
+.help-link {
+    display: block;
+    color: #2b6cb0;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prescription-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Products.css */
+.products-container {
+    width: auto;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 2rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+    color: #718096;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.category {
+    color: #2b6cb0;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-name {
+    color: #2d3748;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    color: #718096;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.add-to-cart {
+    background: #2b6cb0;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.add-to-cart:hover {
+    background: #2c5282;
+}
+
+.prices {
+    text-align: right;
+}
+
+.original-price {
+    display: block;
+    color: #718096;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+
+.current-price {
+    color: #2d3748;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        padding: 1rem;
+    }
+}
+
+/* Add to Products.css */
+.product-image {
+    height: 200px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
